@@ -1,8 +1,9 @@
 import React from 'react'
 import { render } from 'react-dom'
-import Layout from './components/Layout'
+import Player from './components/Player'
+import stylesheet from './css/stylesheet.css'
 
 render(
-<Layout />,
+<Player />,
 document.getElementById('root')
 )
