@@ -3,18 +3,53 @@ body{
   color: white;
 }
 
+.willFlash {
+  animation: flash 1.5s forwards linear infinite;
+}
+@keyframes flash {
+  33% {
+    background: #FAC51C;
+  }
+  33% {
+    background: #00a885;
+  }
+  34% {
+    background: #FAC51C; 
+  }
+}
+
+.startFlash {
+  animation: flash 7s forwards linear infinite;
+}
+@keyframes flash {
+  33% {
+    background: #00a885;
+  }
+  33% {
+    background: #FAC51C;
+  }
+  34% {
+    background: #00a885; 
+  }
+}
+
+.startWrapper{
+  position: relative;
+}
+
 .startBtn {
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   width: 100%;
-  height: 300px;
+  position: absolute;
+  top: 50%; 
+  margin-top: 250px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   color: #fff;
   font-size: 125px;
   font-weight: bold;
   background-color: #B8312F;
   text-transform: uppercase;
-  margin: 50px auto;
-  padding: 65px;
-
+ /* margin: 350px auto;
+  padding: 65px;*/
 }
 
 .playerCards {
@@ -65,7 +100,6 @@ body{
 }
 
 .restartButton {
-  width: 70%;
   font-weight: bold;
   font-size: 30px;
   text-transform: uppercase;
@@ -81,43 +115,34 @@ body{
 }
 
 .aceChoice{
-  padding: 30px;
-  margin: 0 auto;
+  padding: 15px;
+  text-align: center;
 }
 
 .aceButtons {
-  display: inline-block;
-  text-align: center;
+  display: block;
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  width: 200px;
-  height: 40px;
-  padding: 10px 30px 10px 30px; 
+  padding: 10px; 
   color: #28324E;
   background-color: #FAC51C;
-  margin: 30px auto;
   font-weight: bold;
+  font-size: 40px;
   text-transform: uppercase;
-  /*margin: 0 auto;*/
+  margin-top: 10px;
 }
 
 .hitMeBtn, .standBtn{
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  display: inline-flex;
+  display: inline-block;
   text-align: center;
   width: 200px;
   height: 40px;
-  padding: 10px 30px 10px 30px; 
+  padding: 10px;
   color: white;
   background-color: #00A885;
   font-weight: bold;
   text-transform: uppercase;
-  margin: 30px auto;
-}
-.hitMeBtn{
-  margin-right: 25px;
-}
-.standBtn{
-  margin-left: 50px;
+  margin: 30px 10px 30px 10px;
 }
 
 .hitMeBtn:hover, .standBtn:hover {

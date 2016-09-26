@@ -94,13 +94,13 @@ export default class Player extends Component {
 
     if(this.state.gameStarted === false){
       return (
-      
         <div className="container">
           <div className="row text-center">
             <div className="col-xs-12 messageContainer text-center">
-              <h1 className='winnerMessage'>Ye Ole' Black Jack Game</h1>
-              <div className="startBtn" onClick={this._triggerStartGame}>
-                <span className='' >Start Game</span>
+              <div className="startWrapper">
+                <div className="startBtn startFlash" onClick={this._triggerStartGame}>
+                  <span className='' >Start Game</span>
+                </div>
               </div>
             </div>
           </div>
@@ -121,7 +121,6 @@ export default class Player extends Component {
               <div className="col-xs-6 text-center">
                 <div>
                   <h3>Your Cards</h3>
-                   
                   <div className="playerCards">
                     {this.state.playerHand.length ? this.state.playerHand.map((card, num) => {
                       return (
@@ -167,8 +166,8 @@ export default class Player extends Component {
             <div className="row">
               {this.state.aceHandler.trigger ? 
                 <div className="aceChoice col-xs-6">
-                  <span className='aceButtons' onClick={this._setAceValue} id='1'>Ace = 1</span>
-                  <span className='aceButtons' onClick={this._setAceValue} id='11'>Ace = 11</span>
+                  <span className='aceButtons willFlash' onClick={this._setAceValue} id='1'>Ace becomes 1?</span>
+                  <span className='aceButtons willFlash' onClick={this._setAceValue} id='11'>Ace becomes 11?</span>
                 </div> : <div></div>
               }
             </div>
